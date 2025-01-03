@@ -37,7 +37,7 @@ function deleteItemFromCart(cart, productId) {
 function getTotalPriceOfCart(cart) {
   let totalPrice = 0;
   cart.forEach((product) => {
-    totalPrice += product.price;
+    totalPrice += (product.price * product.quantity);
   });
   return totalPrice;
 }
